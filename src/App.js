@@ -80,6 +80,7 @@ class App extends Component {
               }}
               placeholder="Filter by author name"
               filterLabel="Authors"
+              URLParams={true}
             />
           </div>
           <div className={"mainBar"}>
@@ -90,8 +91,8 @@ class App extends Component {
               react={{
                 "and": ["mainSearch", "ratingsFilter", "publishFilter", "authorFilter"]
               }}
-              pagination={true}
-              size={8}
+              pagination={false}
+              size={10}
               sortOptions={[
                 { dataField: "average_rating", sortBy: "desc", label: "Ratings (High to low)" },
                 { dataField: "original_title.raw", sortBy: "asc", label: "Title A->Z"},
